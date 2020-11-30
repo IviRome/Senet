@@ -1,19 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections.Generic;
 
 public class Script_Hechizo_Fuego : MonoBehaviour
 {
 
 	public float speed;
 	[Tooltip("From 0% to 100%")]
-	public float fireRate;
 	public GameObject muzzlePrefab;
 	public GameObject hitPrefab;
 	public AudioClip shotSFX;
 	public AudioClip hitSFX;
-	private float speedRandomness;
 	private Vector3 offset;
 	private bool collided;
 

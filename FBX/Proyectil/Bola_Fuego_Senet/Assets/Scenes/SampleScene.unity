@@ -250,7 +250,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -362,6 +362,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4580714904906042, guid: 5727f3393f270a34ca8464323e8247f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580714904906042, guid: 5727f3393f270a34ca8464323e8247f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580714904906042, guid: 5727f3393f270a34ca8464323e8247f3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.97401
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580714904906042, guid: 5727f3393f270a34ca8464323e8247f3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.97401
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580714904906042, guid: 5727f3393f270a34ca8464323e8247f3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.97401
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841670035184224, guid: 5727f3393f270a34ca8464323e8247f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 114255666497802202, guid: 5727f3393f270a34ca8464323e8247f3,
         type: 3}
       propertyPath: trails.Array.size
@@ -391,6 +415,41 @@ PrefabInstance:
         type: 3}
       propertyPath: hitPrefab
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 198748462937176054, guid: 5727f3393f270a34ca8464323e8247f3,
+        type: 3}
+      propertyPath: ShapeModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198748462937176054, guid: 5727f3393f270a34ca8464323e8247f3,
+        type: 3}
+      propertyPath: ShapeModule.type
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 198748462937176054, guid: 5727f3393f270a34ca8464323e8247f3,
+        type: 3}
+      propertyPath: ShapeModule.m_MeshSpawn.mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198748462937176054, guid: 5727f3393f270a34ca8464323e8247f3,
+        type: 3}
+      propertyPath: UVModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198748462937176054, guid: 5727f3393f270a34ca8464323e8247f3,
+        type: 3}
+      propertyPath: UVModule.mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198748462937176054, guid: 5727f3393f270a34ca8464323e8247f3,
+        type: 3}
+      propertyPath: LightsModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198748462937176054, guid: 5727f3393f270a34ca8464323e8247f3,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198969432181178134, guid: 5727f3393f270a34ca8464323e8247f3,
         type: 3}
@@ -422,6 +481,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 17dcaf2ab5ab9a44d83d84bd55de4feb, type: 2}
+    - target: {fileID: 199944654240619552, guid: 5727f3393f270a34ca8464323e8247f3,
+        type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114255666497802202, guid: 5727f3393f270a34ca8464323e8247f3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5727f3393f270a34ca8464323e8247f3, type: 3}
@@ -527,7 +591,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  fireRate: 1
   muzzlePrefab: {fileID: 1433295770268946, guid: a1be1a00d4bbdba4d9cb72e2c8a0714b,
     type: 3}
   hitPrefab: {fileID: 1433295770268946, guid: a1be1a00d4bbdba4d9cb72e2c8a0714b, type: 3}

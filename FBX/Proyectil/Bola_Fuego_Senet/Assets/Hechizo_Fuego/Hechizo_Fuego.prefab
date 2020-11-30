@@ -19133,7 +19133,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 17dcaf2ab5ab9a44d83d84bd55de4feb, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 17dcaf2ab5ab9a44d83d84bd55de4feb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19229,7 +19229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  fireRate: 0
   muzzlePrefab: {fileID: 0}
   hitPrefab: {fileID: 0}
   shotSFX: {fileID: 0}
@@ -19254,7 +19253,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 17dcaf2ab5ab9a44d83d84bd55de4feb, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 17dcaf2ab5ab9a44d83d84bd55de4feb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
