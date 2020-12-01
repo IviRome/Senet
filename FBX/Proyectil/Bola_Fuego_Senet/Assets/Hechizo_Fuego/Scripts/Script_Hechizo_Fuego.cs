@@ -8,23 +8,26 @@ public class Script_Hechizo_Fuego : MonoBehaviour
 
 	public float speed;
 	[Tooltip("From 0% to 100%")]
+	public GameObject spawnBolas;
 	public GameObject muzzlePrefab;
 	public GameObject hitPrefab;
 	public AudioClip shotSFX;
 	public AudioClip hitSFX;
 	private Vector3 offset;
 	private bool collided;
-	public Button elBoton;
+	public GameObject elBoton;
 	private Button btn;
 	private int dispararBola;
-	private Vector3 posicionSpawnBola;
-	private GameObject otraBola;
+
+	public bool seHaDisparadoLaBola;
+
 
 	void Start()
 	{
 
 		dispararBola = 0;
-		posicionSpawnBola = transform.position;
+		elBoton = GameObject.Find("btn_shoot");
+		spawnBolas = GameObject.Find("SpawnBolas");
 		btn = elBoton.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
 		inicializarDisparo();
@@ -45,15 +48,10 @@ public class Script_Hechizo_Fuego : MonoBehaviour
 			transform.position += (transform.forward + offset) * (speed * Time.deltaTime);
 	}
 
-	void spawnearBola()
-    {
-		otraBola = Instantiate(gameObject, posicionSpawnBola, Quaternion.identity);
-	}
-
 	void TaskOnClick()
 	{
 		dispararBola = 1;
-		spawnearBola();
+		spawnBolas.GetComponent<spawnDeBolas>().seHaDisparadoLaBola = true;
 	}
 
 	void inicializarDisparo()

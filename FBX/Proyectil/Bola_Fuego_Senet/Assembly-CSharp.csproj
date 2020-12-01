@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Hechizo_Fuego\Scripts\Script_Hechizo_Fuego.cs" />
+    <Compile Include="Assets\Hechizo_Fuego\Scripts\spawnDeBolas.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
