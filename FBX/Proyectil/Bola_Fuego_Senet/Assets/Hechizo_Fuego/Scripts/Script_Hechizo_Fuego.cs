@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Script_Hechizo_Fuego : MonoBehaviour
 {
@@ -13,11 +14,50 @@ public class Script_Hechizo_Fuego : MonoBehaviour
 	public AudioClip hitSFX;
 	private Vector3 offset;
 	private bool collided;
+	public Button elBoton;
+	private Button btn;
+	private int dispararBola;
+	private Vector3 posicionSpawnBola;
+	private GameObject otraBola;
 
 	void Start()
 	{
 
+		dispararBola = 0;
+		posicionSpawnBola = transform.position;
+		btn = elBoton.GetComponent<Button>();
+		btn.onClick.AddListener(TaskOnClick);
+		inicializarDisparo();
+		
+	}
 
+	void Update()
+	{
+
+		moverBola();
+
+	}
+
+	void moverBola()
+    {
+		//Debug.Log("Muevo la bola");
+		if (speed != 0 && dispararBola == 1)
+			transform.position += (transform.forward + offset) * (speed * Time.deltaTime);
+	}
+
+	void spawnearBola()
+    {
+		otraBola = Instantiate(gameObject, posicionSpawnBola, Quaternion.identity);
+	}
+
+	void TaskOnClick()
+	{
+		dispararBola = 1;
+		spawnearBola();
+	}
+
+	void inicializarDisparo()
+    {
 		if (muzzlePrefab != null)
 		{
 			var muzzleVFX = Instantiate(muzzlePrefab, transform.position, Quaternion.identity);
@@ -38,14 +78,9 @@ public class Script_Hechizo_Fuego : MonoBehaviour
 		}
 	}
 
-	void Update()
-	{
-		if (speed != 0)
-			transform.position += (transform.forward + offset) * (speed * Time.deltaTime);
-	}
-
 	void OnCollisionEnter(Collision co)
 	{
+		dispararBola = 0;
 		if (co.gameObject.tag != "Bullet" && !collided)
 		{
 			collided = true;
@@ -54,8 +89,6 @@ public class Script_Hechizo_Fuego : MonoBehaviour
 			{
 				GetComponent<AudioSource>().PlayOneShot(hitSFX);
 			}
-
-
 
 			speed = 0;
 			GetComponent<Rigidbody>().isKinematic = true;
@@ -75,7 +108,7 @@ public class Script_Hechizo_Fuego : MonoBehaviour
 				}
 				else
 					Destroy(hitVFX, ps.main.duration);
-			}
+			}		
 
 			StartCoroutine(DestroyParticle(0f));
 		}
