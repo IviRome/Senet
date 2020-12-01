@@ -10,20 +10,33 @@ public class spawnDeBolas : MonoBehaviour
     public bool seHaDisparadoLaBola;
     private float currentTime;
     private float maxTime;
+    public GameObject elBoton;
+    private Button btn;
+
 
     // Start is called before the first frame update
     void Start()
     {
         seHaDisparadoLaBola = false;
-        Instantiate(laBola, transform.position, laBola.transform.rotation);
+        
+        elBoton = GameObject.Find("btn_shoot");
+        btn = elBoton.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
         maxTime = 0.5f;
+    }
+
+    void TaskOnClick()
+    {
+        GameObject a = Instantiate(laBola, transform.position, laBola.transform.rotation);
+        a.GetComponent<Script_Hechizo_Fuego>().cambiarDispararBolaATrue();
+        seHaDisparadoLaBola = true;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if( seHaDisparadoLaBola )
+        /*if( seHaDisparadoLaBola )
         {
             Debug.Log("Va a spawnear otra");
             currentTime += Time.deltaTime;
@@ -35,7 +48,7 @@ public class spawnDeBolas : MonoBehaviour
                 currentTime = 0;
             }
             
-        }
+        }*/
         
     }
 }

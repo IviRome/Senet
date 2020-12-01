@@ -4871,13 +4871,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  laBola: {fileID: 0}
+  spawnBolas: {fileID: 0}
   muzzlePrefab: {fileID: 1433295770268946, guid: a1be1a00d4bbdba4d9cb72e2c8a0714b,
     type: 3}
   hitPrefab: {fileID: 1433295770268946, guid: a1be1a00d4bbdba4d9cb72e2c8a0714b, type: 3}
   shotSFX: {fileID: 0}
   hitSFX: {fileID: 0}
-  elBoton: {fileID: 0}
+  dispararBola: 1
   seHaDisparadoLaBola: 0
 --- !u!1 &7801834434632321730
 GameObject:

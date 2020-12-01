@@ -245,7 +245,7 @@ Transform:
   m_GameObject: {fileID: 511927846}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 3.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.6443, y: 3.6443, z: 3.6443}
   m_Children: []
   m_Father: {fileID: 451644108}
   m_RootOrder: 0
@@ -264,6 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laBola: {fileID: 7801759146595732258, guid: d3bca54adc604154cb8ac6b5e80a48bf, type: 3}
   seHaDisparadoLaBola: 0
+  elBoton: {fileID: 0}
 --- !u!65 &511927849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -273,7 +274,7 @@ BoxCollider:
   m_GameObject: {fileID: 511927846}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

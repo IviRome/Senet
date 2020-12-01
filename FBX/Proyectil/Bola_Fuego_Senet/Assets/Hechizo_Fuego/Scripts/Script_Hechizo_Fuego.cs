@@ -15,9 +15,8 @@ public class Script_Hechizo_Fuego : MonoBehaviour
 	public AudioClip hitSFX;
 	private Vector3 offset;
 	private bool collided;
-	public GameObject elBoton;
 	private Button btn;
-	private int dispararBola;
+	public bool dispararBola;
 
 	public bool seHaDisparadoLaBola;
 
@@ -25,11 +24,9 @@ public class Script_Hechizo_Fuego : MonoBehaviour
 	void Start()
 	{
 
-		dispararBola = 0;
-		elBoton = GameObject.Find("btn_shoot");
+		dispararBola = true;
+
 		spawnBolas = GameObject.Find("SpawnBolas");
-		btn = elBoton.GetComponent<Button>();
-		btn.onClick.AddListener(TaskOnClick);
 		inicializarDisparo();
 		
 	}
@@ -37,22 +34,23 @@ public class Script_Hechizo_Fuego : MonoBehaviour
 	void Update()
 	{
 
+		Debug.Log("Se dispara la bola " + dispararBola );
 		moverBola();
 
 	}
 
 	void moverBola()
     {
-		//Debug.Log("Muevo la bola");
-		if (speed != 0 && dispararBola == 1)
+		//Debug.Log("Muevo la bola"
+		if (speed != 0 && dispararBola == true)
 			transform.position += (transform.forward + offset) * (speed * Time.deltaTime);
 	}
 
-	void TaskOnClick()
-	{
-		dispararBola = 1;
-		spawnBolas.GetComponent<spawnDeBolas>().seHaDisparadoLaBola = true;
-	}
+	public void cambiarDispararBolaATrue()
+    {
+		dispararBola = true;
+    }
+
 
 	void inicializarDisparo()
     {
@@ -78,7 +76,8 @@ public class Script_Hechizo_Fuego : MonoBehaviour
 
 	void OnCollisionEnter(Collision co)
 	{
-		dispararBola = 0;
+		dispararBola = false;
+		Debug.Log("Colisiona con: " + co.gameObject.name);
 		if (co.gameObject.tag != "Bullet" && !collided)
 		{
 			collided = true;
