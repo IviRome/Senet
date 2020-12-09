@@ -37,7 +37,7 @@ public class Perder : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer < 0)
             {
-                perder.CrossFadeAlpha(1, 4f, false);
+                perder.CrossFadeAlpha(1, 1f, false);
             }
             
             

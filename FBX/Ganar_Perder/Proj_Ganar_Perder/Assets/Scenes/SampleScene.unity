@@ -685,8 +685,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101994664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 0.4084448, y: 0.4084448, z: 0.4084448}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0000041076}
+  m_LocalScale: {x: 0.49614644, y: 0.49614644, z: 0.49614644}
   m_Children: []
   m_Father: {fileID: 1940379509}
   m_RootOrder: 0
@@ -709,26 +709,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.30980393, g: 0, b: 0.003921569, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 13
-    m_FontStyle: 1
+    m_Font: {fileID: 12800000, guid: 7a31906bfdc2b7b438030d442fa89312, type: 3}
+    m_FontSize: 0
+    m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 69
     m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 0
+    m_AlignByGeometry: 1
+    m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Has Fracasado
+  m_Text: You died
 --- !u!222 &2101994667
 CanvasRenderer:
   m_ObjectHideFlags: 0
