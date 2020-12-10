@@ -5,7 +5,9 @@ using UnityEngine;
 public class SlowMotion : MonoBehaviour
 {
 
-    public float slowFactor = 0.5f;
+    public float slowFactor = 0.1f;
+
+    public bool toquen;
    
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,14 @@ public class SlowMotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Time.timeScale = slowFactor;
-        Time.fixedDeltaTime = Time.timeScale * .05f;
+
+        if (toquen==true) {
+
+            Time.timeScale = slowFactor;
+            Time.fixedDeltaTime = Time.timeScale * .05f;
+        }
+
+        
+        
     }
 }

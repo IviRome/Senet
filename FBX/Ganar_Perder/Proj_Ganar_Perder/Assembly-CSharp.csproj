@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Explosion_Perder.cs" />
-    <Compile Include="Assets\Perder.cs" />
+    <Compile Include="Assets\Perder_Ganar.cs" />
     <Compile Include="Assets\SlowMotion.cs" />
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <Reference Include="UnityEngine">
